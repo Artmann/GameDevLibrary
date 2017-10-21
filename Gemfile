@@ -13,6 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'acts-as-taggable-on'
+gem "bulma-rails"
 
 group :production do
   gem 'pg'
