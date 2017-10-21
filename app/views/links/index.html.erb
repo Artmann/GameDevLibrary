@@ -1,16 +1,19 @@
-<div>
-  <%= link_to('Add Link', :new_link) %>
+<div class="section">
+  <h1>Game Dev Links</h1>
+  <%= link_to('Add Link', :new_link, class: 'button is-primary') %>
 </div>
 
-<% @links.each do |link| %>
-  <div class="link">
-    <%= link_to(link.title, link.url) %>
-    <% if link.tags %>
-      <div class="tags">
-        <% link.tags.each do |t| %>
-          <%= link_to(t, links_path(tag: t.to_s)) %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+<div class="section links">
+  <% @links.each do |link| %>
+    <div class="link-container">
+      <%= link_to(link.title, link.url, class: 'link') %>
+      <% if link.tags %>
+        <div class="tags">
+          <% link.tags.each do |t| %>
+            <%= link_to(t, links_path(tag: t.to_s)) %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
