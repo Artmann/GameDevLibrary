@@ -1,0 +1,22 @@
+<%= form_for(@link) do |f| %>
+
+  <div>
+    <%= f.label :url %>
+    <%= f.text_field :url, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  </div>
+
+  <div>
+    <%= f.submit "Save" %>
+  </div>
+
+<% end %>
