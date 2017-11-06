@@ -5,6 +5,7 @@ class LinksController < ApplicationController
     else
       @links = Link.all
     end
+		@links = @links.order("created_at DESC")
   end
 
   def new
