@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'acts-as-taggable-on'
 gem "bulma-rails"
+gem 'font-awesome-sass'
 
 group :production do
   gem 'pg'
